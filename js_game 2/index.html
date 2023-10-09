@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <canvas id = "canvas"></canvas>
+   <div class="score-menu">
+        <div class="half">
+            <div class="score" id = "score">0</div>
+        
+            <img src="img//figure-0.png" class="fig-img" id="img_fig">
+        </div>
+       
+        
+   </div>
+
+</body>
+<script src="p5.js"></script>
+<script src="functions.js"></script>
+<script src="figure.js"></script>
+<script src="script.js"></script>
+<script>
+    function moveRect(e){
+       
+        switch(e.key){
+             
+            case "ArrowLeft":  // если нажата клавиша влево
+                
+                lr = 2;
+                break;
+           
+            case "ArrowRight":   // если нажата клавиша вправо 
+
+                lr = 1;
+
+            break;
+            case "ArrowTop":   // если нажата клавиша вверх
+               
+               
+            break;   
+              
+               
+            case "ArrowDown":   // если нажата клавиша вниз
+               
+                g+=10;
+                
+                break;
+        }
+    }
+     
+    addEventListener("keydown", moveRect);
+
+
+   
+</script>
+
+</html>
